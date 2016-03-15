@@ -1,2 +1,8 @@
-#auto: true
 permalink: /:year/:month/:day/:title
+
+author :
+  name : sinarf
+  email : sinarf@sinarf.org
+  github : sinarf
+  twitter : sinarf
+
