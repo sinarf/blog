@@ -1,3 +1,0 @@
-# test posts 
-
-This is the first blog entry, just to see if something works...
