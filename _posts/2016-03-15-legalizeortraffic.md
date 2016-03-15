@@ -21,7 +21,7 @@ A legal access to psychotrope substance.
 
 The prohibition generates traffic. This is a fact. 
 
-**Provide**  corruption and police state. 
+**Provides**  corruption and police state. 
 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">A rapid quizz about how to handle drugs. Are you for :</p>&mdash; Michel Blavin (@sinarf) <a href="https://twitter.com/sinarf/status/709820320815915009">March 15, 2016</a></blockquote>
