@@ -2,11 +2,11 @@
 layout: post
 title: "Sorry for the french"
 date: "2016-03-21 08:03:43 +0100"
-page.youtubeId: "0K7AHA2HERs"
+page.youtubeId: ""
 ---
 
 
 
 C'est le nom de ma [chaine Youtube](https://www.youtube.com/channel/UC9pB6b-pIchij4U0pmqEGWA), dont voici la vidéo d'introduction. 
 
-{% include youtubePlayer.html id=page.youtubeId %}
+{% include youtubePlayer.html id='0K7AHA2HERs' %}
