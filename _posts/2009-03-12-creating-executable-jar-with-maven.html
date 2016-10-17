@@ -1,0 +1,15 @@
+---
+layout: post
+title: Creating an executable jar with maven
+date: '2009-03-12T14:31:00.000+01:00'
+author: Michel Blavin
+tags:
+- maven
+- sinarf
+- java
+modified_time: '2011-05-19T07:03:02.352+02:00'
+blogger_id: tag:blogger.com,1999:blog-7412981599879440541.post-5095475916010000675
+blogger_orig_url: http://blog.sinarf.org/2009/03/creating-executable-jar-with-maven.html
+---
+
+To be able to create an executable jar containing all the dependencies you have to had<br/><pre>&lt;build&gt;<br/>	[...]<br/>	&lt;plugins&gt;<br/>		[...]<br/>		&lt;plugin&gt;<br/>			&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;<br/>			&lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;<br/>			&lt;configuration&gt;<br/>				&lt;descriptorRefs&gt;<br/>					&lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;<br/>				&lt;/descriptorRefs&gt;<br/>				&lt;archive&gt;<br/>					&lt;manifest&gt;<br/>						&lt;mainClass&gt;org.sinarf.myapp.MainClass&lt;/mainClass&gt;<br/>					&lt;/manifest&gt;<br/>				&lt;/archive&gt;<br/>			&lt;/configuration&gt;<br/>		&lt;/plugin&gt;<br/>			[...]<br/>	&lt;/plugins&gt;<br/>	[...]<br/>&lt;/build&gt;</pre><br/>the<br/><pre>mvn assembly:assembly</pre><br/>command will build an executable jar with all the dependancies define in your pom.<br/>Documentation : <a href="http://maven.apache.org/plugins/maven-assembly-plugin/">Maven Assembly Plugin</a>

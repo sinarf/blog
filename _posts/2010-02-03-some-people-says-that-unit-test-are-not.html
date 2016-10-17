@@ -1,0 +1,15 @@
+---
+layout: post
+title: Some people says that unit test are not maintainable...
+date: '2010-02-03T16:14:00.000+01:00'
+author: Michel Blavin
+tags:
+- Opinion
+- coding
+- sinarf
+modified_time: '2011-05-19T07:03:02.347+02:00'
+blogger_id: tag:blogger.com,1999:blog-7412981599879440541.post-6378562833931083954
+blogger_orig_url: http://blog.sinarf.org/2010/02/some-people-says-that-unit-test-are-not.html
+---
+
+... but that we should add more comments in our code.<br/><br/>This is just plain wrong. I think that untested code is not maintainable, and if you have a low test coverage of your code, soon you'll have developers that will say : "We can add that functionality because we would have to retest everything manually and it will take too much time". Correcting bug and adding feature will take more and more time<br/><br/>Unit test are compilable documentation of your code which are, by definition, more maintainable that plain text comment.<br/>Most of the time the comments I see are useless at best, misleading at worst because they are almost never updated. They are useless because they explain what the code is doing which is duplication because the code already says what. The comments should answer the why instead.<br/><br/>If you have to choose between writing a test or comment, you should choose a test, because it is more maintainable. The reason for that is simple, as soon as your test is obsolete it will break and this is the time you have the best chance to know why the test broke.

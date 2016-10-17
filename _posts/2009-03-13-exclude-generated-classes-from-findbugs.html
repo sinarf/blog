@@ -1,0 +1,15 @@
+---
+layout: post
+title: Exclude generated classes from findbugs repport.
+date: '2009-03-13T13:45:00.000+01:00'
+author: Michel Blavin
+tags:
+- maven
+- sinarf
+- java
+modified_time: '2011-05-19T07:03:02.352+02:00'
+blogger_id: tag:blogger.com,1999:blog-7412981599879440541.post-7268878035844059798
+blogger_orig_url: http://blog.sinarf.org/2009/03/exclude-generated-classes-from-findbugs.html
+---
+
+Having findbug running against generated code is a problem because you'll have so many pointless warnings and errors that you might miss the real ones. The ones you can really do something about.<br/><br/>To exclude a package from the repports you'll have to create a exclution filter file usualy name findbugs-exclude.xml<br/><pre>&lt;FindBugsFilter&gt;<br/>  &lt;Match&gt;<br/>    &lt;Package name="~org.sinarf.myapp.mygeneratedpackage.*" /&gt;<br/>  &lt;/Match&gt;<br/>&lt;/FindBugsFilter&gt;</pre><br/>Filter documentation should contain anything you would need : <a href="http://findbugs.sourceforge.net/manual/filter.html">Chapter 8. Filter Files</a>.<br/><br/>Maven should be informed that it should use a filter exclude file.<br/><pre>&lt;reporting&gt;<br/>  &lt;plugins&gt;<br/>    &lt;plugin&gt;<br/>      &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;<br/>      &lt;artifactId&gt;findbugs-maven-plugin&lt;/artifactId&gt;<br/>      &lt;configuration&gt;<br/>        &lt;findbugsXmlOutput&gt;true&lt;/findbugsXmlOutput&gt;<br/>        &lt;findbugsXmlWithMessages&gt;true&lt;/findbugsXmlWithMessages&gt;<br/>        &lt;excludeFilterFile&gt;findbugs-exclude.xml&lt;/excludeFilterFile&gt;<br/>      &lt;/configuration&gt;<br/>    &lt;/plugin&gt;<br/>  &lt;/plugins&gt;<br/>&lt;/reporting&gt;</pre>

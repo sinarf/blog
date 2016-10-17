@@ -1,0 +1,13 @@
+---
+layout: post
+title: naughtysvn an subversion integration for gnome
+date: '2009-01-27T15:46:00.000+01:00'
+author: Michel Blavin
+tags:
+- software
+modified_time: '2011-05-19T07:03:02.355+02:00'
+blogger_id: tag:blogger.com,1999:blog-7412981599879440541.post-1834766483963506887
+blogger_orig_url: http://blog.sinarf.org/2009/01/naughtysvn-subversion-integration-for.html
+---
+
+I tried to install it. First the ./configure command fails :<br/><pre lang="shell">checking for Subversion headers... not found<br/>configure: error: Subversion headers are required. Try --with-svn-include.</pre><br/>I installed the package libsvn-dev to resolve dependencies, but I bump into another error :<br/><pre lang="shell">checking for PACKAGE... configure: error: Package requirements (glib-2.0 &gt;= 2.6.0<br/>        gthread-2.0<br/>        gtk+-2.0 &gt;= 2.6.0<br/>        libgnome-2.0 &gt;= 2.6.0<br/>        libgnomeui-2.0 &gt;= 2.6.0<br/>        gnome-vfs-2.0 &gt;= 2.9.0<br/>        gnome-vfs-module-2.0<br/>        libglade-2.0 &gt;= 2.4.0<br/>        bonobo-activation-2.0 &gt;= 1.0.0) were not met:<br/><br/>No package 'libgnome-2.0' found<br/>No package 'libgnomeui-2.0' found<br/>No package 'gnome-vfs-2.0' found<br/>No package 'gnome-vfs-module-2.0' found<br/>No package 'libglade-2.0' found<br/>No package 'bonobo-activation-2.0' found<br/><br/>Consider adjusting the PKG_CONFIG_PATH environment variable if you<br/>installed software in a non-standard prefix.<br/><br/>Alternatively, you may set the environment variables PACKAGE_CFLAGS<br/>and PACKAGE_LIBS to avoid the need to call pkg-config.<br/>See the pkg-config man page for more details.</pre><br/><del datetime="2009-01-27T13:46:18+00:00">And this one, I have no clue howto solve it.But I will search for a solution.</del> I should have <a href="http://naughtysvn.tigris.org/ds/viewMessage.do?dsForumId=4129&amp;dsMessageId=940274">search first</a>. some package should be installed too:<br/><pre lang="shell">sudo apt-get install libgtk2.0-dev libgnomeui-dev libgnomevfs2-dev libglade2-dev libnautilus-extension-dev</pre><br/><br/>now configure works but make fails :(<br/><br/>I'm a bit worry since the <a href="http://naughtysvn.tigris.org/roadmap.html">roadmap</a> is clearly out of date.

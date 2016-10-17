@@ -1,0 +1,14 @@
+---
+layout: post
+title: generate a properties file during a maven build.
+date: '2009-02-27T14:15:00.000+01:00'
+author: Michel Blavin
+tags:
+- maven
+- java
+modified_time: '2011-05-19T07:03:02.353+02:00'
+blogger_id: tag:blogger.com,1999:blog-7412981599879440541.post-6651063594145759964
+blogger_orig_url: http://blog.sinarf.org/2009/02/generate-properties-file-during-maven.html
+---
+
+To do that you need to use an ant task.<br/><br/>&lt;build&gt;<br/>[...]<br/>&lt;plugin&gt;<br/>&lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;<br/>&lt;version&gt;1.1&lt;/version&gt;<br/>&lt;executions&gt;<br/>&lt;execution&gt;<br/>&lt;phase&gt;generate-sources&lt;/phase&gt;<br/>&lt;configuration&gt;<br/>&lt;tasks name="generePropertiesFile"&gt;<br/>&lt;!-- ensure that the target directory has been created. --&gt;<br/>&lt;mkdir dir="target/classes/" /&gt;<br/>&lt;propertyfile file="target/classes/my_bundle.properties"<br/>comment="comment in the file."&gt;<br/>&lt;!-- list or key / value pair to be inserted in the generated properties file.  --&gt;<br/>&lt;entry key="key1" value="${basedir}/value1" /&gt;<br/>&lt;entry key="key2" value="${basedir}/value2" /&gt;<br/>&lt;/propertyfile&gt;<br/>&lt;/tasks&gt;<br/>&lt;/configuration&gt;<br/>&lt;goals&gt;<br/>&lt;goal&gt;run&lt;/goal&gt;<br/>&lt;/goals&gt;<br/>&lt;/execution&gt;<br/>&lt;/executions&gt;<br/>&lt;dependencies&gt;<br/>&lt;dependency&gt;<br/>&lt;groupId&gt;commons-net&lt;/groupId&gt;<br/>&lt;artifactId&gt;commons-net&lt;/artifactId&gt;<br/>&lt;version&gt;1.4.1&lt;/version&gt;<br/>&lt;/dependency&gt;<br/>&lt;dependency&gt;<br/>&lt;groupId&gt;ant&lt;/groupId&gt;<br/>&lt;artifactId&gt;ant-commons-net&lt;/artifactId&gt;<br/>&lt;version&gt;1.6.5&lt;/version&gt;<br/>&lt;/dependency&gt;<br/>&lt;dependency&gt;<br/>&lt;groupId&gt;ant&lt;/groupId&gt;<br/>&lt;artifactId&gt;ant-nodeps&lt;/artifactId&gt;<br/>&lt;version&gt;1.6.5&lt;/version&gt;<br/>&lt;/dependency&gt;<br/>&lt;/dependencies&gt;<br/>&lt;/plugin&gt;<br/>[...]<br/>&lt;/build&gt;<br/><br/>I almost use it on every project because when you try to use maven properties like ${basedir} you won't have problème with the file separator nightmare since this ant task escape properly the '\' caractère.

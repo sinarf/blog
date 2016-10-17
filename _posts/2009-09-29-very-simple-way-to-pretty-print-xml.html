@@ -1,0 +1,16 @@
+---
+layout: post
+title: very simple way to pretty print xml from command line
+date: '2009-09-29T13:12:00.000+02:00'
+author: Michel Blavin
+tags:
+- Linux
+- software
+- xml
+- sinarf
+modified_time: '2011-05-19T07:03:02.349+02:00'
+blogger_id: tag:blogger.com,1999:blog-7412981599879440541.post-3908815591234019062
+blogger_orig_url: http://blog.sinarf.org/2009/09/very-simple-way-to-pretty-print-xml.html
+---
+
+I was looking for a tool to format xml, making it more readeable, under Linux you can use <a href="http://xmlsoft.org/xmllint.html">xmllint</a>. It's included in libxml2 and thererfore should be availlaible in any distribution. The use is very simple :<br/><code lang="shell"> $ xmllint --format myXmlFile.xml </code><br/>It will pretty print to the console to have in a file just redirect the default output to a file. <br/><code lang="shell"> $ xmllint --format myXmlFile.xml > myPrettyPrintedFile.xml </code><br/><br/>And that's it!
