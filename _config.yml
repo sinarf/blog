@@ -18,3 +18,5 @@ soundcloud_username:  sinarf
 # Build settings
 markdown: kramdown
 
+
+theme: jekyll-theme-tactile
