@@ -13,8 +13,7 @@ I have customized my [vim configuration](https://github.com/sinarf/dotvim), so s
 Links : 
 
 * [Jekyll documentation](https://jekyllrb.com/docs/)
-* [Jekyll vim plugin](https://github.com/parkr/vim-jekyll) 
+* [Jekyll vim plugin](https://github.com/parkr/vim-jekyll). Create a new post with `:Jpost!`
 * [Github markup documentation](https://guides.github.com/features/mastering-markdown/), this is the best entry point I know about this flavor of markdown. 
 * See the site locally, in the blog directory run ```jekyll serve --drafts```
-
 
