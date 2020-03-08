@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Comeback: the return of the revenge (Ep: Unknown)"
+date: "2020-03-08 16:20:00 +0100"
+---
+
+Hello, 
+
+Long time no see. 
+
+This morning I found a good name for my personal project of diminishing my dependency to commercial SaaS product. I made it a project and I bought the domain names. I will handle this project publicly on https://framagit.org. 
+
+I declare the [SaaSOSS Project](https://framagit.org/sinarf/saasoss) open!
