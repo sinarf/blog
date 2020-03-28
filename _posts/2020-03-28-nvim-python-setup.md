@@ -85,19 +85,6 @@ let g:flake8_show_in_file=1
 	
 ```
 
-## Unit test
-
-First install the dependencies:
-
-```
-pip install nose vim-brigde mock
-```
-Install the vim plugin
-
-```
-Plug 'nvie/vim-pyunit'
-```
-
 ## Code completion wich coc and jedi
 
 I am already using coc as my completion tool. To make it work with python I add to install the plugin python for coc. 
@@ -122,6 +109,9 @@ I haven't made the unit test work yet, but I already have:
 - Code lint
 - Simple access to documentation
 - A simple way to run a script
+
+I still missing:
+
 - A simple way to run unit test
 
 
