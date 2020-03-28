@@ -19,4 +19,5 @@ soundcloud_username:  sinarf
 markdown: kramdown
 
 
-theme: jekyll-theme-architect
+#theme: jekyll-theme-hacker
+theme: jekyll-theme-midnight
